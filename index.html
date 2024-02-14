@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="gators.css">
+  <script src="gators.js"></script>
+  <style>
+    /* 四角形のスタイル */
+    .square {
+        width: 200px; /* 幅200ピクセル */
+        height: 200px; /* 高さ200ピクセル */
+        background-color: green; /* 色を緑に設定 */
+        margin: 0 auto; /* 水平方向の中央配置 */
+    }
+  /* 四角形のスタイル */
+  .blue-square {
+      width: 300px; /* 幅200ピクセル */
+      height:100px;
+      background-color:blue; /* 色を青に設定 */
+      margin: 0 auto; /* 水平方向の中央配置 */
+      display: flex;
+  }
+  .input-field {
+    margin: 0 auto; /* 水平方向の中央配置 */
+  }
+      /* 青い四角形内のワニのスタイル */
+  .crocodile {
+        font-size: 24px; /* フォントサイズを設定 */
+    }
+</style>
+
+<script>
+  function displayCrocodiles() {
+      // テキスト入力フィールドから数値を取得
+      const crocodileCount = parseInt(document.getElementById('crocodileInput').value);
+  
+      // ワニの表示領域を取得
+      const crocodileContainer = document.getElementById('crocodileContainer');
+  
+      // ワニの表示領域をクリア
+      crocodileContainer.innerHTML = '';
+  
+      // 入力された数のワニ（🐊）を表示
+      for (let i = 0; i < crocodileCount; i++) {
+          crocodileContainer.innerHTML += '🐊';
+      }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="square"></div>
+  <div class="blue-square">
+    <!-- テキスト入力フィールド -->
+    <input type="number" class="input-field" id="crocodileInput">
+    <!-- ボタン -->
+    <button onclick="displayCrocodiles()">ワニ放出！</button>
+    <!-- ワニの表示領域 -->
+    <div id="crocodileContainer" class="crocodile"></div>
+  </div>
+</body>
+
+
+</html>
